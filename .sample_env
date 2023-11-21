@@ -1,0 +1,10 @@
+#
+#   MAKE A COPY OF THIS SAMPLE TEMPLATE FILE
+#
+#   Rename copy as '.env' and save it LOCALLY
+#   Do not commit '.env' to Github
+#   Add to gitignore if possible
+#
+
+EXCHANGE_RATE_API=""
+

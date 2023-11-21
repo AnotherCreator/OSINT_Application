@@ -1,9 +1,13 @@
+from dotenvy import load_env, read_file
 from exchangeRate import ExchangeRateApi
+import os
 
-api_key = '3ca2c032b93f6bfff74ec55c'
+# Load API Secrets
+load_env(read_file('.env'))
+EXCHANGE_RATE_API = os.environ.get("EXCHANGE_RATE_API_SECRET")
 
 # Create an instance of the ExchangeRateApi class
-exchange_rate_api = ExchangeRateApi(api_key)
+exchange_rate_api = ExchangeRateApi(EXCHANGE_RATE_API)
 
 # Base and target currencies
 base_currency = 'USD'
