@@ -4,10 +4,10 @@ import os
 
 # Load API Secrets
 load_env(read_file('.env'))
-EXCHANGE_RATE_API = os.environ.get("EXCHANGE_RATE_API_SECRET")
+EXCHANGE_RATE_API_SECRET = os.environ.get("EXCHANGE_RATE_API_SECRET")
 
 # Create an instance of the ExchangeRateApi class
-exchange_rate_api = ExchangeRateApi(EXCHANGE_RATE_API)
+exchange_rate_api = ExchangeRateApi(EXCHANGE_RATE_API_SECRET)
 
 # Base and target currencies
 base_currency = 'USD'
