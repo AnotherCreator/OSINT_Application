@@ -72,7 +72,20 @@ class DataEntryForm(ttk.Frame):
 
 
 if __name__ == "__main__":
+    app = ttk.Window("OSINT Application", "superhero", resizable=(False, False))
 
-    app = ttk.Window("Data Entry", "superhero", resizable=(False, False))
+    api1_button = ttk.Button(app, text="Coin Market Cap", bootstyle=(SUCCESS, OUTLINE))
+    api1_button.pack(side=LEFT, padx=5, pady=10)
+
+    api2_button = ttk.Button(app, text="Exchange Rate Converter", bootstyle=(SUCCESS, OUTLINE))
+    api2_button.pack(side=LEFT, padx=5, pady=10)
+
+    api3_button = ttk.Button(app, text="Country Data", bootstyle=(SUCCESS, OUTLINE))
+    api3_button.pack(side=LEFT, padx=5, pady=10)
+
+    api4_button = ttk.Button(app, text="API 4", bootstyle=(SUCCESS, OUTLINE))
+    api4_button.pack(side=LEFT, padx=5, pady=10)
+
+
     DataEntryForm(app)
     app.mainloop()
