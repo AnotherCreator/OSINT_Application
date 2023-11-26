@@ -98,6 +98,7 @@ class CoinMarketCapFormPage(ttk.Frame):
         Login(root).pack()
         self.destroy()
 
+    # Return to the API selector page
     def back(self):
         Login(root).pack()
         self.destroy()
@@ -142,6 +143,7 @@ class ExchangeRateConverterFormPage(ttk.Frame):
         Login(root).pack()
         self.destroy()
 
+    # Return to the API selector page
     def back(self):
         Login(root).pack()
         self.destroy()
@@ -186,6 +188,7 @@ class CountryDataFormPage(ttk.Frame):
         Login(root).pack()
         self.destroy()
 
+    # Return to the API selector page
     def back(self):
         Login(root).pack()
         self.destroy()
@@ -230,6 +233,7 @@ class api4(ttk.Frame):
         Login(root).pack()
         self.destroy()
 
+    # Return to the API selector page
     def back(self):
         Login(root).pack()
         self.destroy()
