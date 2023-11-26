@@ -235,6 +235,7 @@ class api4(ttk.Frame):
         self.destroy()
 
 
-root = ttk.Window("OSINT Application", "superhero", resizable=(False, False))
-Login(root).pack()
-root.mainloop()
+if __name__ == "__main__":
+    root = ttk.Window("OSINT Application", "superhero", resizable=(False, False))
+    Login(root).pack()
+    root.mainloop()
