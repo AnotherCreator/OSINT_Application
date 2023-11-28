@@ -35,12 +35,12 @@ class Login(ttk.Frame):
         # Country Data Button
         ttk.Button(self.btn_frame,
                    text='Country Data',
-                   command=self.exchange_rate_converter_btn_press).pack(side='left', padx=10, pady=10)
+                   command=self.country_data_btn_press()).pack(side='left', padx=10, pady=10)
 
         # API 4 Button
         ttk.Button(self.btn_frame,
                    text='API 4',
-                   command=self.exchange_rate_converter_btn_press).pack(side='left', padx=10, pady=10)
+                   command=self.api4()).pack(side='left', padx=10, pady=10)
 
     def coin_market_cap_btn_press(self):
         CoinMarketCapFormPage(root).pack()
