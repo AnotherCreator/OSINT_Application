@@ -23,40 +23,46 @@ class Login(ttk.Frame):
         self.btn_frame.pack()
 
         # Coin Market Cap Button
-        ttk.Button(self.btn_frame,
-                   text='Coin Market Cap',
-                   command=self.coin_market_cap_btn_press).pack(side='left', padx=10, pady=10)
+        (ttk.Button(self.btn_frame,
+                    text='Coin Market Cap',  # Button name
+                    # Function that button executes on press - only use function name without ending '()'
+                    command=self.coin_market_cap_btn_press)
+         .pack(side='left', padx=10, pady=10))
 
         # Exchange Rate Converter Button
-        ttk.Button(self.btn_frame,
-                   text='Exchange Rate Converter',
-                   command=self.exchange_rate_converter_btn_press).pack(side='left', padx=10, pady=10)
+        (ttk.Button(self.btn_frame,
+                    text='Exchange Rate Converter',
+                    command=self.exchange_rate_converter_btn_press)
+         .pack(side='left', padx=10, pady=10))
 
         # Country Data Button
-        ttk.Button(self.btn_frame,
-                   text='Country Data',
-                   command=self.country_data_btn_press).pack(side='left', padx=10, pady=10)
+        (ttk.Button(self.btn_frame,
+                    text='Country Data',
+                    command=self.country_data_btn_press)
+         .pack(side='left', padx=10, pady=10))
 
         # API 4 Button
-        ttk.Button(self.btn_frame,
-                   text='API 4',
-                   command=self.api4).pack(side='left', padx=10, pady=10)
+        (ttk.Button(self.btn_frame,
+                    text='API 4',
+                    command=self.api4)
+         .pack(side='left', padx=10, pady=10))
 
+    # Functions that execute when user clicks any of the API selectors on the main menu
     def coin_market_cap_btn_press(self):
-        CoinMarketCapFormPage(root).pack()
-        self.destroy()
+        self.destroy()  # This will 'destroy' the current frame, in this case, the API selection page on API press
+        CoinMarketCapFormPage(root).pack()  # This will call the respective API frame to create a new page
 
     def exchange_rate_converter_btn_press(self):
-        ExchangeRateConverterFormPage(root).pack()
         self.destroy()
+        ExchangeRateConverterFormPage(root).pack()
 
     def country_data_btn_press(self):
-        ExchangeRateConverterFormPage(root).pack()
         self.destroy()
+        ExchangeRateConverterFormPage(root).pack()
 
     def api4(self):
-        api4(root).pack()
         self.destroy()
+        api4(root).pack()
 
 
 class CoinMarketCapFormPage(ttk.Frame):
@@ -95,13 +101,13 @@ class CoinMarketCapFormPage(ttk.Frame):
 
     # INSERT ANY API ACTIONS WITHIN THE FOLLOWING 'submit' FUNCTION
     def submit(self):
-        Login(root).pack()
         self.destroy()
+        Login(root).pack()
 
     # Return to the API selector page
     def back(self):
-        Login(root).pack()
         self.destroy()
+        Login(root).pack()
 
 
 class ExchangeRateConverterFormPage(ttk.Frame):
@@ -140,13 +146,13 @@ class ExchangeRateConverterFormPage(ttk.Frame):
 
     # INSERT ANY API ACTIONS WITHIN THE FOLLOWING 'submit' FUNCTION
     def submit(self):
-        Login(root).pack()
         self.destroy()
+        Login(root).pack()
 
     # Return to the API selector page
     def back(self):
-        Login(root).pack()
         self.destroy()
+        Login(root).pack()
 
 
 class CountryDataFormPage(ttk.Frame):
@@ -185,13 +191,13 @@ class CountryDataFormPage(ttk.Frame):
 
     # INSERT ANY API ACTIONS WITHIN THE FOLLOWING 'submit' FUNCTION
     def submit(self):
-        Login(root).pack()
         self.destroy()
+        Login(root).pack()
 
     # Return to the API selector page
     def back(self):
-        Login(root).pack()
         self.destroy()
+        Login(root).pack()
 
 
 class api4(ttk.Frame):
@@ -230,13 +236,13 @@ class api4(ttk.Frame):
 
     # INSERT ANY API ACTIONS WITHIN THE FOLLOWING 'submit' FUNCTION
     def submit(self):
-        Login(root).pack()
         self.destroy()
+        Login(root).pack()
 
     # Return to the API selector page
     def back(self):
-        Login(root).pack()
         self.destroy()
+        Login(root).pack()
 
 
 if __name__ == "__main__":
