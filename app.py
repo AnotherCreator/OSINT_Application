@@ -143,7 +143,7 @@ class ExchangeRateConverterFormPage(ttk.Frame):
         self.converted_currency_abbreviation = ttk.StringVar(value="CAD")
 
         # form header
-        hdr_txt = "Get Coin Data using either its full name, abbreviation, or ranking"
+        hdr_txt = "Currency Converter"
         hdr = ttk.Label(master=self, text=hdr_txt)
         hdr.pack(fill=X, pady=10)
 
@@ -201,6 +201,7 @@ class CountryDataFormPage(ttk.Frame):
         # Form Variables
         # Will use 'USD' as the base currency and 'CAD' as the 'USD -> CAD' conversion
         self.country_name = ttk.StringVar(value="Canada")
+        self.country_capital = ttk.StringVar
 
         # form header
         hdr_txt = "Enter a Name of a Country to get its Information"
@@ -241,8 +242,16 @@ class CountryDataFormPage(ttk.Frame):
     def submit(self):
         print("Country:", self.country_name.get())
 
-        self.destroy()
-        Login(root).pack()
+        self.country_capital = ttk.StringVar(value="")
+
+        container = ttk.Frame(self)
+        container.pack(fill=X, expand=YES, pady=5)
+
+        lbl = ttk.Label(master=container, text="Capital", textvariable=self.country_capital)
+        lbl.pack(side=LEFT, padx=5)
+
+        # self.destroy()
+        # Login(root).pack()
 
     # Return to the API selector page
     def back(self):
