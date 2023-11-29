@@ -4,8 +4,8 @@ class RestCountriesApi:
     def __init__(self):
         self.base_url = 'https://restcountries.com/v3.1'
 
-    def get_all_countries_info(self):
-        api_url = f'{self.base_url}/all'
+    def get_country_info(self, country_name):
+        api_url = f'{self.base_url}/name/{country_name}'
 
         try:
             response = requests.get(api_url)

@@ -5,7 +5,7 @@ class ExchangeRateApi:
         self.api_key = api_key
         self.base_url = 'https://open.er-api.com/v6'
 
-    def get_exchange_rates(self, base_currency):
+    def get_exchange_rates(self, base_currency, target_currency):
         api_url = f'{self.base_url}/latest/{base_currency}?apikey={self.api_key}'
 
         try:
@@ -15,7 +15,7 @@ class ExchangeRateApi:
             if response.status_code == 200:
                 rates = data.get('rates')
                 if rates is not None:
-                    return rates
+                    return rates.get(target_currency)
                 else:
                     print('No exchange rates found.')
             else:
