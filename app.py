@@ -58,7 +58,7 @@ class Login(ttk.Frame):
 
     def country_data_btn_press(self):
         self.destroy()
-        ExchangeRateConverterFormPage(root).pack()
+        CountryDataFormPage(root).pack()
 
     def sunrise_sunset_btn_press(self):
         self.destroy()
@@ -83,14 +83,14 @@ class CoinMarketCapFormPage(ttk.Frame):
         hdr = ttk.Label(master=self, text=hdr_txt)
         hdr.pack(fill=X, pady=10)
 
-        # data frame
-        self.data_frame = Frame(self)
-        self.data_frame.pack(pady=10)
-
         # form entries
         self.create_form_entry("Crypto Coin Full Name", self.coin_full_name)
         self.create_form_entry("Crypto Coin Abbreviation", self.coin_abbreviation)
         self.create_form_entry("Crypto Coin Ranking", self.coin_number_ranking)
+
+        # data frame
+        self.data_frame = Frame(self)
+        self.data_frame.pack(pady=10)
 
         # button frame
         self.btn_frame = Frame(self)
@@ -142,13 +142,18 @@ class ExchangeRateConverterFormPage(ttk.Frame):
         self.base_currency_abbreviation = ttk.StringVar(value="USD")
         self.converted_currency_abbreviation = ttk.StringVar(value="CAD")
 
-        # data frame
-        self.data_frame = Frame(self)
-        self.data_frame.pack(pady=10)
+        # form header
+        hdr_txt = "Get Coin Data using either its full name, abbreviation, or ranking"
+        hdr = ttk.Label(master=self, text=hdr_txt)
+        hdr.pack(fill=X, pady=10)
 
         # form entries
         self.create_form_entry("Base Currency Abbreviation", self.base_currency_abbreviation)
         self.create_form_entry("Converted Currency Abbreviation", self.converted_currency_abbreviation)
+
+        # data frame
+        self.data_frame = Frame(self)
+        self.data_frame.pack(pady=10)
 
         # button frame
         self.btn_frame = Frame(self)
@@ -193,21 +198,21 @@ class CountryDataFormPage(ttk.Frame):
         super().__init__()
         self.parent = parent
 
+        # Form Variables
+        # Will use 'USD' as the base currency and 'CAD' as the 'USD -> CAD' conversion
+        self.country_name = ttk.StringVar(value="Canada")
+
+        # form header
+        hdr_txt = "Enter a Name of a Country to get its Information"
+        hdr = ttk.Label(master=self, text=hdr_txt)
+        hdr.pack(fill=X, pady=10)
+
+        # form entries
+        self.create_form_entry("Country Name", self.country_name)
+
         # data frame
         self.data_frame = Frame(self)
         self.data_frame.pack(pady=10)
-
-        # username:
-        Label(self.data_frame, text='Test:').pack()
-        # username entry
-        self.username = Entry(self.data_frame)
-        self.username.pack()
-
-        # password:
-        Label(self.data_frame, text='Password:').pack()
-        # password entry
-        self.password = Entry(self.data_frame)
-        self.password.pack()
 
         # button frame
         self.btn_frame = Frame(self)
@@ -221,8 +226,21 @@ class CountryDataFormPage(ttk.Frame):
         ttk.Button(self.btn_frame, text='Submit',
                    command=self.submit).pack(side='left', padx=10, pady=10)
 
+    def create_form_entry(self, label, variable):
+        """Create a single form entry"""
+        container = ttk.Frame(self)
+        container.pack(fill=X, expand=YES, pady=5)
+
+        lbl = ttk.Label(master=container, text=label.title())
+        lbl.pack(side=LEFT, padx=5)
+
+        ent = ttk.Entry(master=container, textvariable=variable)
+        ent.pack(side=LEFT, padx=5, fill=X, expand=YES)
+
     # INSERT ANY API ACTIONS WITHIN THE FOLLOWING 'submit' FUNCTION
     def submit(self):
+        print("Country:", self.country_name.get())
+
         self.destroy()
         Login(root).pack()
 
@@ -238,21 +256,23 @@ class SunriseSunset(ttk.Frame):
         super().__init__()
         self.parent = parent
 
+        # Form Variables
+        # Will 'America/New_York' has the coordinate location
+        self.longitude = ttk.DoubleVar(value=38.907192)
+        self.latitude = ttk.DoubleVar(value=-77.036873)
+
+        # form header
+        hdr_txt = "Enter a Longitude and Latitude to get Sunrise and Sunset Info"
+        hdr = ttk.Label(master=self, text=hdr_txt)
+        hdr.pack(fill=X, pady=10)
+
+        # form entries
+        self.create_form_entry("Longitude", self.longitude)
+        self.create_form_entry("Latitude", self.latitude)
+
         # data frame
         self.data_frame = Frame(self)
         self.data_frame.pack(pady=10)
-
-        # username:
-        Label(self.data_frame, text='Test:').pack()
-        # username entry
-        self.username = Entry(self.data_frame)
-        self.username.pack()
-
-        # password:
-        Label(self.data_frame, text='Password:').pack()
-        # password entry
-        self.password = Entry(self.data_frame)
-        self.password.pack()
 
         # button frame
         self.btn_frame = Frame(self)
@@ -266,8 +286,22 @@ class SunriseSunset(ttk.Frame):
         ttk.Button(self.btn_frame, text='Submit',
                    command=self.submit).pack(side='left', padx=10, pady=10)
 
+    def create_form_entry(self, label, variable):
+        """Create a single form entry"""
+        container = ttk.Frame(self)
+        container.pack(fill=X, expand=YES, pady=5)
+
+        lbl = ttk.Label(master=container, text=label.title())
+        lbl.pack(side=LEFT, padx=5)
+
+        ent = ttk.Entry(master=container, textvariable=variable)
+        ent.pack(side=LEFT, padx=5, fill=X, expand=YES)
+
     # INSERT ANY API ACTIONS WITHIN THE FOLLOWING 'submit' FUNCTION
     def submit(self):
+        print("Longitude:", self.longitude.get())
+        print("Latitude:", self.latitude.get())
+
         self.destroy()
         Login(root).pack()
 
