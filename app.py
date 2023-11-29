@@ -71,21 +71,26 @@ class CoinMarketCapFormPage(ttk.Frame):
         super().__init__()
         self.parent = parent
 
+        # Form Variables
+        # Will use 'Bitcoin / BTC / 1' as default values unless changes by user in the
+        # '# form entries' section
+        self.coin_full_name = ttk.StringVar(value="Bitcoin")
+        self.coin_abbreviation = ttk.StringVar(value="BTC")
+        self.coin_number_ranking = ttk.IntVar(value=1)
+
+        # form header
+        hdr_txt = "Get Coin Data using either it's full name, abbreviation, or ranking"
+        hdr = ttk.Label(master=self, text=hdr_txt)
+        hdr.pack(fill=X, pady=10)
+
         # data frame
         self.data_frame = Frame(self)
         self.data_frame.pack(pady=10)
 
-        # username:
-        Label(self.data_frame, text='Test:').pack()
-        # username entry
-        self.username = Entry(self.data_frame)
-        self.username.pack()
-
-        # password:
-        Label(self.data_frame, text='Password:').pack()
-        # password entry
-        self.password = Entry(self.data_frame)
-        self.password.pack()
+        # form entries
+        self.create_form_entry("Crypto Coin Full Name", self.coin_full_name)
+        self.create_form_entry("Crypto Coin Abbreviation", self.coin_abbreviation)
+        self.create_form_entry("Crypto Coin Ranking", self.coin_number_ranking)
 
         # button frame
         self.btn_frame = Frame(self)
@@ -99,8 +104,24 @@ class CoinMarketCapFormPage(ttk.Frame):
         ttk.Button(self.btn_frame, text='Submit',
                    command=self.submit).pack(side='left', padx=10, pady=10)
 
+    # Form entry styling
+    def create_form_entry(self, label, variable):
+        """Create a single form entry"""
+        container = ttk.Frame(self)
+        container.pack(fill=X, expand=YES, pady=5)
+
+        lbl = ttk.Label(master=container, text=label.title())
+        lbl.pack(side=LEFT, padx=5)
+
+        ent = ttk.Entry(master=container, textvariable=variable)
+        ent.pack(side=LEFT, padx=5, fill=X, expand=YES)
+
     # INSERT ANY API ACTIONS WITHIN THE FOLLOWING 'submit' FUNCTION
     def submit(self):
+        print("Crypto Coin Full Name:", self.coin_full_name.get())
+        print("Crypto Coin Abbreviation:", self.coin_abbreviation.get())
+        print("Crypto Coin Ranking:", self.coin_number_ranking.get())
+
         self.destroy()
         Login(root).pack()
 
