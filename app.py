@@ -43,8 +43,8 @@ class Login(ttk.Frame):
 
         # API 4 Button
         (ttk.Button(self.btn_frame,
-                    text='API 4',
-                    command=self.api4)
+                    text='Sunrise Sunset',
+                    command=self.sunrise_sunset_btn_press)
          .pack(side='left', padx=10, pady=10))
 
     # Functions that execute when user clicks any of the API selectors on the main menu
@@ -60,9 +60,9 @@ class Login(ttk.Frame):
         self.destroy()
         ExchangeRateConverterFormPage(root).pack()
 
-    def api4(self):
+    def sunrise_sunset_btn_press(self):
         self.destroy()
-        api4(root).pack()
+        SunriseSunset(root).pack()
 
 
 class CoinMarketCapFormPage(ttk.Frame):
@@ -221,7 +221,7 @@ class CountryDataFormPage(ttk.Frame):
         Login(root).pack()
 
 
-class api4(ttk.Frame):
+class SunriseSunset(ttk.Frame):
     def __init__(self, parent):
         Frame.__init__(self, parent)
         super().__init__()
