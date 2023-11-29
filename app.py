@@ -137,21 +137,18 @@ class ExchangeRateConverterFormPage(ttk.Frame):
         super().__init__()
         self.parent = parent
 
+        # Form Variables
+        # Will use 'USD' as the base currency and 'CAD' as the 'USD -> CAD' conversion
+        self.base_currency_abbreviation = ttk.StringVar(value="USD")
+        self.converted_currency_abbreviation = ttk.StringVar(value="CAD")
+
         # data frame
         self.data_frame = Frame(self)
         self.data_frame.pack(pady=10)
 
-        # username:
-        Label(self.data_frame, text='Test:').pack()
-        # username entry
-        self.username = Entry(self.data_frame)
-        self.username.pack()
-
-        # password:
-        Label(self.data_frame, text='Password:').pack()
-        # password entry
-        self.password = Entry(self.data_frame)
-        self.password.pack()
+        # form entries
+        self.create_form_entry("Base Currency Abbreviation", self.base_currency_abbreviation)
+        self.create_form_entry("Converted Currency Abbreviation", self.converted_currency_abbreviation)
 
         # button frame
         self.btn_frame = Frame(self)
@@ -165,8 +162,22 @@ class ExchangeRateConverterFormPage(ttk.Frame):
         ttk.Button(self.btn_frame, text='Submit',
                    command=self.submit).pack(side='left', padx=10, pady=10)
 
+    def create_form_entry(self, label, variable):
+        """Create a single form entry"""
+        container = ttk.Frame(self)
+        container.pack(fill=X, expand=YES, pady=5)
+
+        lbl = ttk.Label(master=container, text=label.title())
+        lbl.pack(side=LEFT, padx=5)
+
+        ent = ttk.Entry(master=container, textvariable=variable)
+        ent.pack(side=LEFT, padx=5, fill=X, expand=YES)
+
     # INSERT ANY API ACTIONS WITHIN THE FOLLOWING 'submit' FUNCTION
     def submit(self):
+        print("Base Currency Abbreviation:", self.base_currency_abbreviation.get())
+        print("Converted Currency Abbreviation:", self.converted_currency_abbreviation.get())
+
         self.destroy()
         Login(root).pack()
 
