@@ -81,19 +81,15 @@ class CoinMarketCapFormPage(ttk.Frame):
         # Form Variables
         # Will use 'Bitcoin / BTC / 1' as default values unless changes by user in the
         # '# form entries' section
-        self.coin_full_name = ttk.StringVar(value="Bitcoin")
         self.coin_abbreviation = ttk.StringVar(value="BTC")
-        self.coin_number_ranking = ttk.IntVar(value=1)
 
         # form header
-        hdr_txt = "Get Coin Data using either it's full name, abbreviation, or ranking"
+        hdr_txt = "Get Coin Data using its Abbreviation"
         hdr = ttk.Label(master=self, text=hdr_txt)
         hdr.pack(fill=X, pady=10)
 
         # form entries
-        self.create_form_entry("Crypto Coin Full Name", self.coin_full_name)
         self.create_form_entry("Crypto Coin Abbreviation", self.coin_abbreviation)
-        self.create_form_entry("Crypto Coin Ranking", self.coin_number_ranking)
 
         # data frame
         self.data_frame = Frame(self)
@@ -125,9 +121,7 @@ class CoinMarketCapFormPage(ttk.Frame):
 
     # INSERT ANY API ACTIONS WITHIN THE FOLLOWING 'submit' FUNCTION
     def submit(self):
-        print("Crypto Coin Full Name:", self.coin_full_name.get())
         print("Crypto Coin Abbreviation:", self.coin_abbreviation.get())
-        print("Crypto Coin Ranking:", self.coin_number_ranking.get())
 
         self.destroy()
         Login(root).pack()
@@ -347,8 +341,6 @@ class SunriseSunset(ttk.Frame):
 
         print("Longitude:", self.longitude.get())
         print("Latitude:", self.latitude.get())
-
-
 
     # Return to the API selector page
     def back(self):
