@@ -7,6 +7,7 @@ from dotenvy import load_env, read_file
 from ttkbootstrap.constants import *
 
 from modules.exchangeRate import ExchangeRateApi
+from modules.restCountryData import RestCountriesApi
 
 
 class Login(ttk.Frame):
@@ -197,16 +198,9 @@ class ExchangeRateConverterFormPage(ttk.Frame):
                          (self.base_currency_abbreviation.get().upper(),
                           self.converted_currency_abbreviation.get().upper()))
 
-        if exchange_rate is not None:
-            print(f'Exchange rate from {self.base_currency_abbreviation.get().upper()} to '
-                  f'{self.converted_currency_abbreviation.get().upper()}: {exchange_rate}')
-        else:
-            print(f'Unable to fetch exchange rate for {self.base_currency_abbreviation.get().upper()} to '
-                  f'{self.converted_currency_abbreviation.get().upper()}')
-
+        # Print to gui
         container = ttk.Frame(self)
         container.pack(fill=X, expand=YES, pady=5)
-
         lbl = ttk.Label(master=container,
                         text=f"1 {self.base_currency_abbreviation.get().upper()} "
                              f"= {exchange_rate} {self.converted_currency_abbreviation.get().upper()}")
@@ -228,6 +222,10 @@ class CountryDataFormPage(ttk.Frame):
         # Will use 'USD' as the base currency and 'CAD' as the 'USD -> CAD' conversion
         self.country_name = ttk.StringVar(value="Canada")
         self.country_capital = ttk.StringVar
+        self.country_population = ttk.StringVar
+        self.country_area = ttk.StringVar
+        self.country_independent = ttk.StringVar
+
 
         # form header
         hdr_txt = "Enter a Name of a Country to get its Information"
@@ -266,18 +264,22 @@ class CountryDataFormPage(ttk.Frame):
 
     # INSERT ANY API ACTIONS WITHIN THE FOLLOWING 'submit' FUNCTION
     def submit(self):
-        print("Country:", self.country_name.get())
-
-        self.country_capital = ttk.StringVar(value="")
+        rest_countries_api = RestCountriesApi()
+        country_info = rest_countries_api.get_country_info(self.country_name.get())
+        self.country_capital = country_info[0].get('capital')[0]
+        self.country_population = country_info[0].get('population')
+        self.country_area = country_info[0].get('area')
+        self.country_independent = country_info[0].get('independent')
 
         container = ttk.Frame(self)
         container.pack(fill=X, expand=YES, pady=5)
-
-        lbl = ttk.Label(master=container, text="Capital", textvariable=self.country_capital)
+        lbl = ttk.Label(master=container,
+                        text=f"Country: {self.country_name.get()}\n"
+                             f"Capital: {self.country_capital}\n"
+                             f"Population: {self.country_population}\n"
+                             f"Area: {self.country_area}\n"
+                             f"Independent: {self.country_independent}")
         lbl.pack(side=LEFT, padx=5)
-
-        # self.destroy()
-        # Login(root).pack()
 
     # Return to the API selector page
     def back(self):
