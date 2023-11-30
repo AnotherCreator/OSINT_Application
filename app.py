@@ -1,6 +1,12 @@
+import os
 from tkinter import Tk, Frame, Button, Entry, Label
+
+import requests
 import ttkbootstrap as ttk
+from dotenvy import load_env, read_file
 from ttkbootstrap.constants import *
+
+from modules.exchangeRate import ExchangeRateApi
 
 
 class Login(ttk.Frame):
@@ -179,12 +185,32 @@ class ExchangeRateConverterFormPage(ttk.Frame):
         ent.pack(side=LEFT, padx=5, fill=X, expand=YES)
 
     # INSERT ANY API ACTIONS WITHIN THE FOLLOWING 'submit' FUNCTION
-    def submit(self):
-        print("Base Currency Abbreviation:", self.base_currency_abbreviation.get())
-        print("Converted Currency Abbreviation:", self.converted_currency_abbreviation.get())
+    def submit(self, ):
+        load_env(read_file('.env'))
+        exchange_rate_api_secret = os.environ.get('EXCHANGE_RATE_API_SECRET')
+        exchange_rate_api = ExchangeRateApi(exchange_rate_api_secret)
 
-        self.destroy()
-        Login(root).pack()
+        print("Base Currency Abbreviation:", self.base_currency_abbreviation.get().upper())
+        print("Converted Currency Abbreviation:", self.converted_currency_abbreviation.get().upper())
+
+        exchange_rate = (exchange_rate_api.get_exchange_rates
+                         (self.base_currency_abbreviation.get().upper(),
+                          self.converted_currency_abbreviation.get().upper()))
+
+        if exchange_rate is not None:
+            print(f'Exchange rate from {self.base_currency_abbreviation.get().upper()} to '
+                  f'{self.converted_currency_abbreviation.get().upper()}: {exchange_rate}')
+        else:
+            print(f'Unable to fetch exchange rate for {self.base_currency_abbreviation.get().upper()} to '
+                  f'{self.converted_currency_abbreviation.get().upper()}')
+
+        container = ttk.Frame(self)
+        container.pack(fill=X, expand=YES, pady=5)
+
+        lbl = ttk.Label(master=container,
+                        text=f"1 {self.base_currency_abbreviation.get().upper()} "
+                             f"= {exchange_rate} {self.converted_currency_abbreviation.get().upper()}")
+        lbl.pack(side=LEFT, padx=5)
 
     # Return to the API selector page
     def back(self):
@@ -267,11 +293,11 @@ class SunriseSunset(ttk.Frame):
 
         # Form Variables
         # Will 'America/New_York' has the coordinate location
-        self.longitude = ttk.DoubleVar(value=38.907192)
-        self.latitude = ttk.DoubleVar(value=-77.036873)
+        self.longitude = ttk.StringVar(value='40.71427')
+        self.latitude = ttk.StringVar(value='-74.00597')
 
         # form header
-        hdr_txt = "Enter a Longitude and Latitude to get Sunrise and Sunset Info"
+        hdr_txt = "Enter a Longitude and Latitude to get Sunrise and Sunset Info - Powered by SunriseSunset.io"
         hdr = ttk.Label(master=self, text=hdr_txt)
         hdr.pack(fill=X, pady=10)
 
@@ -308,11 +334,19 @@ class SunriseSunset(ttk.Frame):
 
     # INSERT ANY API ACTIONS WITHIN THE FOLLOWING 'submit' FUNCTION
     def submit(self):
+        api_url = f'https://api.sunrisesunset.io/json?lat={self.latitude.get()}&lng={self.longitude.get()}'
+
+        try:
+            response = requests.get(api_url)
+            data = response.json()
+            print(data)
+        except Exception as e:
+            print(f'An error occurred: {str(e)}')
+
         print("Longitude:", self.longitude.get())
         print("Latitude:", self.latitude.get())
 
-        self.destroy()
-        Login(root).pack()
+
 
     # Return to the API selector page
     def back(self):
