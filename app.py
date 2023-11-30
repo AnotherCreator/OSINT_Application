@@ -6,8 +6,13 @@ import ttkbootstrap as ttk
 from dotenvy import load_env, read_file
 from ttkbootstrap.constants import *
 
+from modules.coinMarketCap import CoinMarketCapApi
 from modules.exchangeRate import ExchangeRateApi
 from modules.restCountryData import RestCountriesApi
+
+load_env(read_file('.env'))
+EXCHANGE_RATE_API_SECRET = os.environ.get("EXCHANGE_RATE_API_SECRET")
+COIN_MARKET_CAP_API_SECRET = os.environ.get("COIN_MARKET_CAP_API_SECRET")
 
 
 class Login(ttk.Frame):
@@ -121,10 +126,27 @@ class CoinMarketCapFormPage(ttk.Frame):
 
     # INSERT ANY API ACTIONS WITHIN THE FOLLOWING 'submit' FUNCTION
     def submit(self):
-        print("Crypto Coin Abbreviation:", self.coin_abbreviation.get())
+        coin_market_cap_api = CoinMarketCapApi(COIN_MARKET_CAP_API_SECRET)
+        coin_market_cap_api.get_exchange_rate()
+        try:
+            x = coin_market_cap_api.get_coin(self.coin_abbreviation.get().upper())
 
-        self.destroy()
-        Login(root).pack()
+            # Print to gui
+            container = ttk.Frame(self)
+            container.pack(fill=X, expand=YES, pady=5)
+            lbl = ttk.Label(master=container,
+                            text=f"Name: {x[1]}\n"
+                                 f"Symbol: {x[0]}\n"
+                                 f"Price: $ {x[2]:.2f}\n"
+                                 f"Daily % Change: {x[3]:.2f}%")
+            lbl.pack(side=LEFT, padx=5)
+        except Exception as e:
+            # Print to gui
+            container = ttk.Frame(self)
+            container.pack(fill=X, expand=YES, pady=5)
+            lbl = ttk.Label(master=container,
+                            text="Coin not found, try again")
+            lbl.pack(side=LEFT, padx=5)
 
     # Return to the API selector page
     def back(self):
