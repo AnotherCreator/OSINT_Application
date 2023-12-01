@@ -1,0 +1,251 @@
+Country,Capital,Population,Area,Gini Index,Latitude,Longitude,Independent,Landlocked
+Christmas Island,Flying Fish Cove,2072,135.0,N/A,-10.5,105.66666666,False,False
+Eritrea,Asmara,5352000,117600.0,N/A,15.0,39.0,True,False
+Samoa,Apia,198410,2842.0,{'2013': 38.7},-13.58333333,-172.33333333,True,False
+North Macedonia,Skopje,2077132,25713.0,{'2018': 33.0},41.83333333,22.0,True,True
+Djibouti,Djibouti,988002,23200.0,{'2017': 41.6},11.5,43.0,True,False
+Jordan,Amman,10203140,89342.0,{'2010': 33.7},31.0,36.0,True,False
+Pakistan,Islamabad,220892331,881912.0,{'2018': 31.6},30.0,70.0,True,False
+French Polynesia,Papeetē,280904,4167.0,N/A,17.6797,149.4068,False,False
+Ireland,Dublin,4994724,70273.0,{'2017': 31.4},53.0,-8.0,True,False
+Mauritania,Nouakchott,4649660,1030700.0,{'2014': 32.6},20.0,-12.0,True,False
+Denmark,Copenhagen,5831404,43094.0,{'2018': 28.2},56.0,10.0,True,False
+Namibia,Windhoek,2540916,825615.0,{'2015': 59.1},-22.0,17.0,True,False
+Ghana,Accra,31072945,238533.0,{'2016': 43.5},8.0,-2.0,True,False
+South Sudan,Juba,11193729,619745.0,{'2016': 44.1},7.0,30.0,True,True
+Slovakia,Bratislava,5458827,49037.0,{'2018': 25.0},48.66666666,19.5,True,True
+American Samoa,Pago Pago,55197,199.0,N/A,-14.33333333,-170.0,False,False
+Moldova,Chișinău,2617820,33846.0,{'2018': 25.7},47.0,29.0,True,True
+North Korea,Pyongyang,25778815,120538.0,N/A,40.0,127.0,True,False
+Macau,N/A,649342,30.0,N/A,22.16666666,113.55,False,False
+Turks and Caicos Islands,Cockburn Town,38718,948.0,N/A,21.75,-71.58333333,False,False
+Seychelles,Victoria,98462,452.0,{'2018': 32.1},-4.58333333,55.66666666,True,False
+Armenia,Yerevan,2963234,29743.0,{'2019': 29.9},40.0,45.0,True,True
+Curaçao,Willemstad,155014,444.0,N/A,12.116667,-68.933333,False,False
+Guadeloupe,Basse-Terre,400132,1628.0,N/A,16.25,-61.583333,False,False
+British Indian Ocean Territory,Diego Garcia,3000,60.0,N/A,-6.0,71.5,False,False
+Equatorial Guinea,Malabo,1402985,28051.0,N/A,2.0,10.0,True,False
+Syria,Damascus,17500657,185180.0,{'2003': 37.5},35.0,38.0,True,False
+Angola,Luanda,32866268,1246700.0,{'2018': 51.3},-12.5,18.5,True,False
+Tajikistan,Dushanbe,9537642,143100.0,{'2015': 34.0},39.0,71.0,True,True
+Venezuela,Caracas,28435943,916445.0,{'2006': 44.8},8.0,-66.0,True,False
+United States Minor Outlying Islands,Washington DC,300,34.2,N/A,19.3,166.633333,False,False
+Åland Islands,Mariehamn,29458,1580.0,N/A,60.116667,19.9,False,False
+Poland,Warsaw,37950802,312679.0,{'2018': 30.2},52.0,20.0,True,False
+Saudi Arabia,Riyadh,34813867,2149690.0,N/A,25.0,45.0,True,False
+Republic of the Congo,Brazzaville,5657000,342000.0,{'2011': 48.9},-1.0,15.0,True,False
+Bosnia and Herzegovina,Sarajevo,3280815,51209.0,{'2011': 33.0},44.0,18.0,True,False
+United States Virgin Islands,Charlotte Amalie,106290,347.0,N/A,18.35,-64.933333,False,False
+New Caledonia,Nouméa,271960,18575.0,N/A,-21.5,165.5,False,False
+San Marino,City of San Marino,33938,61.0,N/A,43.76666666,12.41666666,True,True
+Czechia,Prague,10698896,78865.0,{'2018': 25.0},49.75,15.5,True,True
+Guatemala,Guatemala City,16858333,108889.0,{'2014': 48.3},15.5,-90.25,True,False
+South Korea,Seoul,51780579,100210.0,{'2016': 31.4},37.0,127.5,True,False
+Estonia,Tallinn,1331057,45227.0,{'2018': 30.3},59.0,26.0,True,False
+Nepal,Kathmandu,29136808,147181.0,{'2010': 32.8},28.0,84.0,True,True
+Kosovo,Pristina,1775378,10908.0,{'2017': 29.0},42.666667,21.166667,N/A,True
+Botswana,Gaborone,2351625,582000.0,{'2015': 53.3},-22.0,24.0,True,True
+Philippines,Manila,109581085,342353.0,{'2018': 42.3},13.0,122.0,True,False
+Saint Pierre and Miquelon,Saint-Pierre,6069,242.0,N/A,46.83333333,-56.33333333,False,False
+Iraq,Baghdad,40222503,438317.0,{'2012': 29.5},33.0,44.0,True,False
+Lebanon,Beirut,6825442,10452.0,{'2011': 31.8},33.83333333,35.83333333,True,False
+Burundi,Gitega,11890781,27834.0,{'2013': 38.6},-3.5,30.0,True,True
+Mongolia,Ulan Bator,3278292,1564110.0,{'2018': 32.7},46.0,105.0,True,True
+Faroe Islands,Tórshavn,48865,1393.0,N/A,62.0,-7.0,False,False
+Paraguay,Asunción,7132530,406752.0,{'2019': 45.7},-23.0,-58.0,True,True
+Svalbard and Jan Mayen,Longyearbyen,2562,-1.0,N/A,78.0,20.0,False,False
+Tokelau,Fakaofo,1411,12.0,N/A,-9.0,-172.0,False,False
+Guernsey,St. Peter Port,62999,78.0,N/A,49.46666666,-2.58333333,False,False
+Caribbean Netherlands,Kralendijk,25987,328.0,N/A,12.18,-68.25,False,False
+Algeria,Algiers,44700000,2381741.0,{'2011': 27.6},28.0,3.0,True,False
+France,Paris,67391582,551695.0,{'2018': 32.4},46.0,2.0,True,False
+Netherlands,Amsterdam,16655799,41850.0,{'2018': 28.1},52.5,5.75,True,False
+Greenland,Nuuk,56367,2166086.0,N/A,72.0,-40.0,False,False
+Sint Maarten,Philipsburg,40812,34.0,N/A,18.033333,-63.05,False,False
+Chad,N'Djamena,16425859,1284000.0,{'2011': 43.3},15.0,19.0,True,True
+Finland,Helsinki,5530719,338424.0,{'2018': 27.3},64.0,26.0,True,False
+Panama,Panama City,4314768,75417.0,{'2019': 49.8},9.0,-80.0,True,False
+Palestine,Ramallah,4803269,6220.0,{'2016': 33.7},31.9,35.2,False,False
+Yemen,Sana'a,29825968,527968.0,{'2014': 36.7},15.0,48.0,True,False
+Brazil,Brasília,212559409,8515767.0,{'2019': 53.4},-10.0,-55.0,True,False
+Nigeria,Abuja,206139587,923768.0,{'2018': 35.1},10.0,8.0,True,False
+Palau,Ngerulmud,18092,459.0,N/A,7.5,134.5,True,False
+Japan,Tokyo,125836021,377930.0,{'2013': 32.9},36.0,138.0,True,False
+Tanzania,Dodoma,59734213,945087.0,{'2017': 40.5},-6.0,35.0,True,False
+Kazakhstan,Nur-Sultan,18754440,2724900.0,{'2018': 27.8},48.0196,66.9237,True,True
+Portugal,Lisbon,10305564,92090.0,{'2018': 33.5},39.5,-8.0,True,False
+South Georgia,King Edward Point,30,3903.0,N/A,-54.5,-37.0,False,False
+Sri Lanka,Sri Jayawardenepura Kotte,21919000,65610.0,{'2016': 39.3},7.0,81.0,True,False
+Germany,Berlin,83240525,357114.0,{'2016': 31.9},51.0,9.0,True,False
+Western Sahara,El Aaiún,510713,266000.0,N/A,24.5,-13.0,False,False
+Myanmar,Naypyidaw,54409794,676578.0,{'2017': 30.7},22.0,98.0,True,False
+Colombia,Bogotá,50882884,1141748.0,{'2019': 51.3},4.0,-72.0,True,False
+Peru,Lima,32971846,1285216.0,{'2019': 41.5},-10.0,-76.0,True,False
+Senegal,Dakar,16743930,196722.0,{'2011': 40.3},14.0,-14.0,True,False
+Kyrgyzstan,Bishkek,6591600,199951.0,{'2019': 29.7},41.0,75.0,True,True
+China,Beijing,1402112000,9706961.0,{'2016': 38.5},35.0,105.0,True,False
+Afghanistan,Kabul,40218234,652230.0,N/A,33.0,65.0,True,True
+Turkey,Ankara,84339067,783562.0,{'2019': 41.9},39.0,35.0,True,False
+Liberia,Monrovia,5057677,111369.0,{'2016': 35.3},6.5,-9.5,True,False
+South Africa,Pretoria,59308690,1221037.0,{'2014': 63.0},-29.0,24.0,True,False
+Chile,Santiago,19116209,756102.0,{'2017': 44.4},-30.0,-71.0,True,False
+Malta,Valletta,525285,316.0,{'2018': 28.7},35.9375,14.3754,True,False
+Kiribati,South Tarawa,119446,811.0,{'2006': 37.0},1.41666666,173.0,True,False
+Cape Verde,Praia,555988,4033.0,{'2015': 42.4},16.5388,23.0418,True,False
+Jersey,Saint Helier,100800,116.0,N/A,49.25,-2.16666666,False,False
+Iceland,Reykjavik,366425,103000.0,{'2017': 26.1},65.0,-18.0,True,False
+Gambia,Banjul,2416664,10689.0,{'2015': 35.9},13.46666666,-16.56666666,True,False
+Vanuatu,Port Vila,307150,12189.0,{'2010': 37.6},-16.0,167.0,True,False
+Uruguay,Montevideo,3473727,181034.0,{'2019': 39.7},-33.0,-56.0,True,False
+Oman,Muscat,5106622,309500.0,N/A,21.0,57.0,True,False
+Sudan,Khartoum,43849269,1886068.0,{'2014': 34.2},15.0,30.0,True,False
+India,New Delhi,1380004385,3287590.0,{'2011': 35.7},20.0,77.0,True,False
+Laos,Vientiane,7275556,236800.0,{'2018': 38.8},18.0,105.0,True,True
+Aruba,Oranjestad,106766,180.0,N/A,12.5,-69.96666666,False,False
+Martinique,Fort-de-France,378243,1128.0,N/A,14.666667,-61.0,False,False
+Comoros,Moroni,869595,1862.0,{'2014': 45.3},-12.16666666,44.25,True,False
+Spain,Madrid,47351567,505992.0,{'2018': 34.7},40.0,-4.0,True,False
+Antigua and Barbuda,Saint John's,97928,442.0,N/A,17.05,-61.8,True,False
+Uzbekistan,Tashkent,34232050,447400.0,{'2003': 35.3},41.0,64.0,True,True
+Maldives,Malé,540542,300.0,{'2016': 31.3},3.25,73.0,True,False
+Gibraltar,Gibraltar,33691,6.0,N/A,36.13333333,-5.35,False,False
+Indonesia,Jakarta,273523621,1904569.0,{'2019': 38.2},-5.0,120.0,True,False
+Pitcairn Islands,Adamstown,56,47.0,N/A,-25.06666666,-130.1,False,False
+Vietnam,Hanoi,97338583,331212.0,{'2018': 35.7},16.16666666,107.83333333,True,False
+Malaysia,Kuala Lumpur,32365998,330803.0,{'2015': 41.1},2.5,112.5,True,False
+Cook Islands,Avarua,18100,236.0,N/A,-21.23333333,-159.76666666,False,False
+Eswatini,Mbabane,1160164,17364.0,{'2016': 54.6},-26.5,31.5,True,True
+Uganda,Kampala,45741000,241550.0,{'2016': 42.8},1.0,32.0,True,True
+Madagascar,Antananarivo,27691019,587041.0,{'2012': 42.6},-20.0,47.0,True,False
+Fiji,Suva,896444,18272.0,{'2013': 36.7},17.7134,178.065,True,False
+Norway,Oslo,5379475,323802.0,{'2018': 27.6},62.0,10.0,True,False
+Antarctica,N/A,1000,14000000.0,N/A,-90.0,0.0,False,False
+Bouvet Island,N/A,0,49.0,N/A,54.4208,3.3464,False,False
+Cyprus,Nicosia,1207361,9251.0,{'2018': 32.7},35.0,33.0,True,False
+Taiwan,Taipei,23503349,36193.0,N/A,23.5,121.0,False,False
+Papua New Guinea,Port Moresby,8947027,462840.0,{'2009': 41.9},-6.0,147.0,True,False
+Rwanda,Kigali,12952209,26338.0,{'2016': 43.7},-2.0,30.0,True,True
+DR Congo,Kinshasa,108407721,2344858.0,{'2012': 42.1},0.0,25.0,True,False
+Cameroon,Yaoundé,26545864,475442.0,{'2014': 46.6},6.0,12.0,True,False
+Serbia,Belgrade,6908224,88361.0,{'2017': 36.2},44.0,21.0,True,True
+Lithuania,Vilnius,2794700,65300.0,{'2018': 35.7},56.0,24.0,True,False
+French Southern and Antarctic Lands,Port-aux-Français,400,7747.0,N/A,-49.25,69.167,False,False
+Cambodia,Phnom Penh,16718971,181035.0,N/A,13.0,105.0,True,False
+"Saint Helena, Ascension and Tristan da Cunha",Jamestown,53192,394.0,N/A,-15.95,-5.72,False,False
+United Arab Emirates,Abu Dhabi,9890400,83600.0,{'2018': 26.0},24.0,54.0,True,False
+Bermuda,Hamilton,63903,54.0,N/A,32.33333333,-64.75,False,False
+Monaco,Monaco,39244,2.02,N/A,43.73333333,7.4,True,False
+Cuba,Havana,11326616,109884.0,N/A,21.5,-80.0,True,False
+Hong Kong,City of Victoria,7500700,1104.0,N/A,22.267,114.188,False,False
+Northern Mariana Islands,Saipan,57557,464.0,N/A,15.2,145.75,False,False
+Togo,Lomé,8278737,56785.0,{'2015': 43.1},8.0,1.16666666,True,False
+Luxembourg,Luxembourg,632275,2586.0,{'2018': 35.4},49.75,6.16666666,True,True
+Mauritius,Port Louis,1265740,2040.0,{'2017': 36.8},-20.28333333,57.55,True,False
+Argentina,Buenos Aires,45376763,2780400.0,{'2019': 42.9},-34.0,-64.0,True,False
+Grenada,St. George's,112519,344.0,N/A,12.11666666,-61.66666666,True,False
+Nicaragua,Managua,6624554,130373.0,{'2014': 46.2},13.0,-85.0,True,False
+Niue,Alofi,1470,260.0,N/A,-19.03333333,-169.86666666,False,False
+Ukraine,Kyiv,44134693,603500.0,{'2019': 26.6},49.0,32.0,True,False
+Guyana,Georgetown,786559,214969.0,{'1998': 45.1},5.0,-59.0,True,False
+Niger,Niamey,24206636,1267000.0,{'2014': 34.3},16.0,8.0,True,True
+Benin,Porto-Novo,12123198,112622.0,{'2015': 47.8},9.5,2.25,True,False
+Saint Lucia,Castries,183629,616.0,{'2016': 51.2},13.88333333,-60.96666666,True,False
+Tuvalu,Funafuti,11792,26.0,{'2010': 39.1},-8.0,178.0,True,False
+Norfolk Island,Kingston,2302,36.0,N/A,-29.03333333,167.95,False,False
+Egypt,Cairo,102334403,1002450.0,{'2017': 31.5},27.0,30.0,True,False
+Saint Kitts and Nevis,Basseterre,53192,261.0,N/A,17.33333333,-62.75,True,False
+Lesotho,Maseru,2142252,30355.0,{'2017': 44.9},-29.5,28.5,True,True
+Tonga,Nuku'alofa,105697,747.0,{'2015': 37.6},-20.0,-175.0,True,False
+Georgia,Tbilisi,3714000,69700.0,{'2019': 35.9},42.0,43.5,True,False
+Ethiopia,Addis Ababa,114963583,1104300.0,{'2015': 35.0},8.0,38.0,True,True
+Dominican Republic,Santo Domingo,10847904,48671.0,{'2019': 41.9},19.0,-70.66666666,True,False
+Saint Vincent and the Grenadines,Kingstown,110947,389.0,N/A,13.25,-61.2,True,False
+Belize,Belmopan,397621,22966.0,{'1999': 53.3},17.25,-88.75,True,False
+Isle of Man,Douglas,85032,572.0,N/A,54.25,-4.5,False,False
+Morocco,Rabat,36910558,446550.0,{'2013': 39.5},32.0,-5.0,True,False
+Haiti,Port-au-Prince,11402533,27750.0,{'2012': 41.1},19.0,-72.41666666,True,False
+Mayotte,Mamoudzou,226915,374.0,N/A,-12.83333333,45.16666666,False,False
+Burkina Faso,Ouagadougou,20903278,272967.0,{'2014': 35.3},13.0,-2.0,True,True
+Bangladesh,Dhaka,164689383,147570.0,{'2016': 32.4},24.0,90.0,True,False
+Kuwait,Kuwait City,4270563,17818.0,N/A,29.5,45.75,True,False
+Réunion,Saint-Denis,840974,2511.0,N/A,-21.15,55.5,False,False
+Jamaica,Kingston,2961161,10991.0,{'2004': 45.5},18.25,-77.5,True,False
+Romania,Bucharest,19286123,238391.0,{'2018': 35.8},46.0,25.0,True,False
+São Tomé and Príncipe,São Tomé,219161,964.0,{'2017': 56.3},1.0,7.0,True,False
+Bahamas,Nassau,393248,13943.0,N/A,25.0343,-77.3963,True,False
+Mexico,Mexico City,128932753,1964375.0,{'2018': 45.4},23.0,-102.0,True,False
+Saint Martin,Marigot,38659,53.0,N/A,18.0708,63.0501,False,False
+El Salvador,San Salvador,6486201,21041.0,{'2019': 38.8},13.83333333,-88.91666666,True,False
+Saint Barthélemy,Gustavia,4255,21.0,N/A,18.5,-63.41666666,False,False
+Micronesia,Palikir,115021,702.0,{'2013': 40.1},6.91666666,158.25,True,False
+Turkmenistan,Ashgabat,6031187,488100.0,{'1998': 40.8},40.0,60.0,True,True
+Anguilla,The Valley,13452,91.0,N/A,18.25,-63.16666666,False,False
+Central African Republic,Bangui,4829764,622984.0,{'2008': 56.2},7.0,21.0,True,True
+Suriname,Paramaribo,586634,163820.0,{'1999': 57.9},4.0,-56.0,True,False
+Belgium,Brussels,11555997,30528.0,{'2018': 27.2},50.83333333,4.0,True,False
+Sweden,Stockholm,10353442,450295.0,{'2018': 30.0},62.0,15.0,True,False
+Bolivia,Sucre,11673029,1098581.0,{'2019': 41.6},-17.0,-65.0,True,True
+Montenegro,Podgorica,621718,13812.0,{'2016': 38.5},42.5,19.3,True,False
+Mozambique,Maputo,31255435,801590.0,{'2014': 54.0},-18.25,35.0,True,False
+Latvia,Riga,1901548,64559.0,{'2018': 35.1},57.0,25.0,True,False
+Malawi,Lilongwe,19129955,118484.0,{'2016': 44.7},-13.5,34.0,True,True
+Mali,Bamako,20250834,1240192.0,{'2009': 33.0},17.0,-4.0,True,True
+Vatican City,Vatican City,451,0.44,N/A,41.9,12.45,True,True
+Montserrat,Plymouth,4922,102.0,N/A,16.75,-62.2,False,False
+Austria,Vienna,8917205,83871.0,{'2018': 30.8},47.33333333,13.33333333,True,True
+Albania,Tirana,2837743,28748.0,{'2017': 33.2},41.0,20.0,True,False
+British Virgin Islands,Road Town,30237,151.0,N/A,18.431383,-64.62305,False,False
+Zambia,Lusaka,18383956,752612.0,{'2015': 57.1},-15.0,30.0,True,True
+French Guiana,Cayenne,254541,83534.0,N/A,4.0,-53.0,False,False
+Liechtenstein,Vaduz,38137,160.0,N/A,47.26666666,9.53333333,True,True
+Qatar,Doha,2881060,11586.0,N/A,25.5,51.25,True,False
+Solomon Islands,Honiara,686878,28896.0,{'2012': 37.1},-8.0,159.0,True,False
+Nauru,Yaren,10834,21.0,{'2012': 34.8},-0.53333333,166.91666666,True,False
+Greece,Athens,10715549,131990.0,{'2018': 32.9},39.0,22.0,True,False
+Libya,Tripoli,6871287,1759540.0,N/A,25.0,17.0,True,False
+Guinea-Bissau,Bissau,1967998,36125.0,{'2010': 50.7},12.0,-15.0,True,False
+Barbados,Bridgetown,287371,430.0,N/A,13.16666666,-59.53333333,True,False
+Honduras,Tegucigalpa,9904608,112492.0,{'2019': 48.2},15.0,-86.5,True,False
+Somalia,Mogadishu,15893219,637657.0,{'2017': 36.8},10.0,49.0,True,False
+Cayman Islands,George Town,65720,264.0,N/A,19.3133,-81.2546,False,False
+Italy,Rome,59554023,301336.0,{'2017': 35.9},42.83333333,12.83333333,True,False
+Wallis and Futuna,Mata-Utu,11750,142.0,N/A,-13.3,-176.2,False,False
+Andorra,Andorra la Vella,77265,468.0,N/A,42.5,1.5,True,True
+Ecuador,Quito,17643060,276841.0,{'2019': 45.7},-2.0,-77.5,True,False
+Kenya,Nairobi,53771300,580367.0,{'2015': 40.8},1.0,38.0,True,False
+Bahrain,Manama,1701583,765.0,N/A,26.0,50.55,True,False
+United Kingdom,London,67215293,242900.0,{'2017': 35.1},54.0,-2.0,True,False
+Guinea,Conakry,13132792,245857.0,{'2012': 33.7},11.0,-10.0,True,False
+Heard Island and McDonald Islands,N/A,0,412.0,N/A,53.0818,73.5042,False,False
+Russia,Moscow,144104080,17098242.0,{'2018': 37.5},60.0,100.0,True,False
+Brunei,Bandar Seri Begawan,437483,5765.0,N/A,4.5,114.66666666,True,False
+Zimbabwe,Harare,14862927,390757.0,{'2019': 50.3},-20.0,30.0,True,True
+Guam,Hagåtña,168783,549.0,N/A,13.46666666,144.78333333,False,False
+Australia,Canberra,25687041,7692024.0,{'2014': 34.4},-27.0,133.0,True,False
+Slovenia,Ljubljana,2100126,20273.0,{'2018': 24.6},46.11666666,14.81666666,True,False
+Belarus,Minsk,9398861,207600.0,{'2019': 25.3},53.0,28.0,True,True
+Thailand,Bangkok,69799978,513120.0,{'2019': 34.9},15.0,100.0,True,False
+New Zealand,Wellington,5084300,270467.0,N/A,-41.0,174.0,True,False
+Tunisia,Tunis,11818618,163610.0,{'2015': 32.8},34.0,9.0,True,False
+Marshall Islands,Majuro,59194,181.0,N/A,9.0,168.0,True,False
+Sierra Leone,Freetown,7976985,71740.0,{'2018': 35.7},8.5,-11.5,True,False
+Bhutan,Thimphu,771612,38394.0,{'2017': 37.4},27.5,90.5,True,True
+United States,"Washington, D.C.",329484123,9372610.0,{'2018': 41.4},38.0,-97.0,True,False
+Switzerland,Bern,8654622,41284.0,{'2018': 33.1},47.0,8.0,True,True
+Falkland Islands,Stanley,2563,12173.0,N/A,-51.75,-59.0,False,False
+Cocos (Keeling) Islands,West Island,544,14.0,N/A,12.1642,96.871,False,False
+Gabon,Libreville,2225728,267668.0,{'2017': 38.0},-1.0,11.75,True,False
+Dominica,Roseau,71991,751.0,N/A,15.41666666,-61.33333333,True,False
+Canada,Ottawa,38005238,9984670.0,{'2017': 33.3},60.0,-95.0,True,False
+Trinidad and Tobago,Port of Spain,1399491,5130.0,{'1992': 40.3},10.6918,-61.2225,True,False
+Puerto Rico,San Juan,3194034,8870.0,N/A,18.25,-66.5,False,False
+Singapore,Singapore,5685807,710.0,N/A,1.36666666,103.8,True,False
+Hungary,Budapest,9749763,93028.0,{'2018': 29.6},47.0,20.0,True,True
+Costa Rica,San José,5094114,51100.0,{'2019': 48.2},10.0,-84.0,True,False
+Israel,Jerusalem,9216900,20770.0,{'2016': 39.0},31.47,35.13,True,False
+Bulgaria,Sofia,6927288,110879.0,{'2018': 41.3},43.0,25.0,True,False
+Azerbaijan,Baku,10110116,86600.0,{'2005': 26.6},40.5,47.5,True,True
+Timor-Leste,Dili,1318442,14874.0,{'2014': 28.7},-8.83333333,125.91666666,True,False
+Iran,Tehran,83992953,1648195.0,{'2018': 42.0},32.0,53.0,True,False
+Croatia,Zagreb,4047200,56594.0,{'2018': 29.7},45.16666666,15.5,True,False
+Ivory Coast,Yamoussoukro,26378275,322463.0,{'2015': 41.5},8.0,-5.0,True,False
