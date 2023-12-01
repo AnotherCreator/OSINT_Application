@@ -10,6 +10,9 @@ from modules.coinMarketCap import CoinMarketCapApi
 from modules.exchangeRate import ExchangeRateApi
 from modules.restCountryData import RestCountriesApi
 
+
+#  REFER TO '.sample_env' IF YOU ARE GETTING ERRORS ABOUT MISSING '.env' FILE OR VARIABLES
+#  API KEYS MUST BE ACQUIRED TO ALLOW FOR FUNCTIONALITY
 load_env(read_file('.env'))
 EXCHANGE_RATE_API_SECRET = os.environ.get("EXCHANGE_RATE_API_SECRET")
 COIN_MARKET_CAP_API_SECRET = os.environ.get("COIN_MARKET_CAP_API_SECRET")
@@ -242,7 +245,6 @@ class CountryDataFormPage(ttk.Frame):
         self.country_area = ttk.StringVar
         self.country_independent = ttk.StringVar
 
-
         # form header
         hdr_txt = "Enter a Name of a Country to get its Information"
         hdr = ttk.Label(master=self, text=hdr_txt)
@@ -307,12 +309,13 @@ class SunriseSunset(ttk.Frame):
     def __init__(self, parent):
         Frame.__init__(self, parent)
         super().__init__()
+        self.data = None
         self.parent = parent
 
         # Form Variables
         # Will 'America/New_York' has the coordinate location
-        self.longitude = ttk.StringVar(value='40.71427')
-        self.latitude = ttk.StringVar(value='-74.00597')
+        self.longitude = ttk.StringVar(value='-74.00597')
+        self.latitude = ttk.StringVar(value='40.71427')
 
         # form header
         hdr_txt = "Enter a Longitude and Latitude to get Sunrise and Sunset Info - Powered by SunriseSunset.io"
@@ -351,6 +354,9 @@ class SunriseSunset(ttk.Frame):
         ent.pack(side=LEFT, padx=5, fill=X, expand=YES)
 
     # INSERT ANY API ACTIONS WITHIN THE FOLLOWING 'submit' FUNCTION
+    ###
+    #  Following code in 'submit()' submitted by Abhishek Deshpande
+    ###
     def submit(self):
         api_url = f'https://api.sunrisesunset.io/json?lat={self.latitude.get()}&lng={self.longitude.get()}'
 
@@ -358,11 +364,22 @@ class SunriseSunset(ttk.Frame):
             response = requests.get(api_url)
             data = response.json()
             print(data)
+
+            # Print sunrise and sunset data to GUI
+            container = ttk.Frame(self)
+            container.pack(fill=X, expand=YES, pady=5)
+            lbl = ttk.Label(master=container,
+                            text=f"Sunrise: {data['results']['sunrise']}\n"
+                                 f"Sunset: {data['results']['sunset']}\n"
+                                 f"First Light: {data['results']['first_light']}\n"
+                                 f"Last Light: {data['results']['last_light']}")
+            lbl.pack(side=LEFT, padx=5)
+
         except Exception as e:
             print(f'An error occurred: {str(e)}')
 
         print("Longitude:", self.longitude.get())
-        print("Latitude:", self.latitude.get())
+        print("Latitude:", self.latitude.get())  # Return to the API selector page
 
     # Return to the API selector page
     def back(self):
